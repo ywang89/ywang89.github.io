@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+
+# python related
+__pycache__/
+*.py[cod]
+*.$py.class
+
+# R related
+*.Rhistory
+*.RData
+
+# blog related
+_site/
+.jekyll-cache/
+Gemfile.lock
+
+# temporary files
+*~
+
+# common files
+*.pdf
+*.docx
+*.txt
+
+# other
+.DS_Store
+*.log
