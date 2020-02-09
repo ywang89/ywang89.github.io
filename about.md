@@ -3,4 +3,4 @@ title: About
 ---
 # About page
 
-This page tells you a little bit about me.
+This is a blog on topics such as statistics, data science, etc. Mostly study notes. :)
