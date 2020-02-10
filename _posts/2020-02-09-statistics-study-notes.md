@@ -1,0 +1,302 @@
+This is a document where I try to gather and structure my knowledge in
+statistics. This is being continuously updated.
+
+Basic Statistics
+================
+
+Probability Distributions
+-------------------------
+
+**What is Chi-Squared distribution?**
+
+Refer to this [video from Khan
+Academy](https://www.khanacademy.org/math/statistics-probability/inference-categorical-data-chi-square-tests/chi-square-goodness-of-fit-tests/v/chi-square-distribution-introduction).
+
+**What is Poisson distribution?**
+
+A helpful introduction on [Poisson distribution from Khan
+Academy](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/poisson-distribution/v/poisson-process-2).
+
+Also an [interesting/famous
+question](https://stats.stackexchange.com/questions/122722/please-explain-the-waiting-paradox)
+about average waiting time at bus station. Key point is that time
+between events in a Poisson process follow an [exponential
+distribution](https://en.wikipedia.org/wiki/Exponential_distribution).
+
+Others
+------
+
+### What is the relationship between correlation and independence?
+
+Summary:
+
+-   Independent =&gt; uncorrelated
+-   Uncorrelated doesn’t mean independent.
+
+I found the top chart on [Wikipedia
+entry](https://en.wikipedia.org/wiki/Correlation_and_dependence) to be
+especially helpful.
+
+### What is a Q-Q plot?
+
+The [wikipedia explanation](https://en.wikipedia.org/wiki/Q–Q_plot) is
+very clear.
+
+> More abstractly,given two cumulative probability distribution
+> functions F and G, with associated quantile functions
+> *F*<sup> − 1</sup> and *G*<sup> − 1</sup> (the inverse function of the
+> CDF is the quantile function), the Q–Q plot draws the q-th quantile of
+> F against the q-th quantile of G for a range of values of q.
+
+Some related notes on
+[quantiles](https://en.wikipedia.org/wiki/Quantile):
+
+-   “q-quantiles are values that partition a finite set of values into q
+    subsets of (nearly) equal sizes.”
+-   There is one fewer quantile than the number of groups created; e.g.,
+    4-quantiles (or quartiles) are the **3 cut points** that will divide
+    the dataset into 4 equal-sized groups.
+
+2 sample t-test, z-test, multiple comparison
+--------------------------------------------
+
+### What is bonferroni correction? what is holm-bonferroni method?
+
+**\[pending\]**
+
+What is Central Limit Theorem?
+------------------------------
+
+[Khan Academy’s introduction
+video](https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/sampling-distribution-mean/v/central-limit-theorem)
+
+What is sampling? What are some sampling methods?
+-------------------------------------------------
+
+**\[pending\]**
+
+What is type I and type II error?
+---------------------------------
+
+[Wikipedia
+reference](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors)
+
+### Type I error
+
+False positive.
+
+-   In modeling: Detected an event to be positive but in fact it is
+    negative.
+-   In hypothesis testing: rejected null hypothesis, but in fact null
+    hypothesis is true.
+
+### Type II error
+
+False negative.
+
+-   In modeling: Detected an event to be negative but in fact it is
+    positive.
+-   In hypothesis testing: didn’t reject null hypothesis, but in fact
+    null hypothesis is false.
+
+Regression
+==========
+
+The notes on Regression are taken when I was studying “An Introduction
+to Statistical Learning” and [Machine Learning:
+Regression](https://www.coursera.org/learn/ml-regression/).
+
+Linear Regression
+-----------------
+
+### What are the assumptions of linear regression?
+
+Per “A Practical Guide to Quantitative Finance Interviews”:
+
+1.  Relationship between Y and X is linear.
+2.  *E*\[*ϵ*<sub>*i*</sub>\] = 0
+3.  *V**a**r*(*ϵ*<sub>*i*</sub>) = *σ*<sup>2</sup> and
+    *E*\[*ϵ*<sub>*i*</sub>*ϵ*<sub>*j*</sub>\] = 0 (uncorrelated errors)
+4.  No perfect multicollinearity.
+5.  *ϵ* and *x*<sub>*i*</sub> are independent.
+
+Refer to below:
+
+1.  Wikipedia, [assumptions for classical linear regression with
+    OLS](https://en.wikipedia.org/wiki/Ordinary_least_squares#Assumptions)
+
+2.  Wikipedia, [assumptions for standard linear regression with standard
+    estimation
+    techniques](https://en.wikipedia.org/wiki/Linear_regression#Assumptions)
+
+3.  According to [post](http://people.duke.edu/~rnau/testing.htm) from
+    Duke.
+
+### Outliers and high leverage points
+
+**What are outliers?** Data point where Y seems off.
+
+**What are high leverage points?** Data point where X seems off.
+
+**What is leverage statistic, simple linear regression and multiple
+linear regression?**
+
+A [good
+summary](https://newonlinecourses.science.psu.edu/stat462/node/170/)
+from PSU’s online stat course.
+
+### Inputs vs. features
+
+Reference: Coursera’s “Machine Learning: Regression” course
+
+I noticed that in machine learning, the concepts of inputs and features
+are different.
+
+In a nutshell, features are functions of inputs. **\[pending\]** \[more
+details to add with examples\]
+
+### Coefficients’ interpretation
+
+Reference: Coursera’s “Machine Learning: Regression” course
+
+We cannot interpret the coefficients if we cannot hold other features
+fixed.
+
+[Dummy variables - interaction terms
+explanation](https://www.youtube.com/watch?v=ScKL40dp8M4)
+
+[The F statistic - an
+introduction](https://www.youtube.com/watch?v=ie-MYQp1Nic)
+
+Logistic Regression
+-------------------
+
+### What are the assumptions of logistic regression?
+
+**\[pending\]**
+
+### Variable/feature selections
+
+$$WoE = ln(\\frac{\\% positive}{\\% nonpositive})
+$$
+
+$$IV = \\sum\_{i=1}^{\\\#bins}(\\% positive - \\% nonpositive)WoE
+$$
+
+[Reference
+link](https://medium.com/@sundarstyles89/weight-of-evidence-and-information-value-using-python-6f05072e83eb)
+
+### Gini Coefficient & ROC
+
+ROC and Gini coefficient(*G*<sub>1</sub>) have a relationship that:
+
+*G*<sub>1</sub> = 2 \* *A**U**C* − 1
+
+where
+
+$$
+G\_1 = 1 - \\sum\_{i=1}^{n}(X\_i - X\_{i-1})(Y\_i + Y\_{i-1})
+$$
+
+[Area under the
+curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic#Area_under_the_curve)
+
+[ROC
+definition](https://en.wikipedia.org/wiki/Gini_coefficient#Definition)
+
+[Lorenz curve](https://en.wikipedia.org/wiki/Lorenz_curve)
+
+Bias-Variance Tradeoff
+----------------------
+
+**\[pending\]**
+
+A good source of reference is
+[here](http://scott.fortmann-roe.com/docs/BiasVariance.html).
+
+The derivation can be found
+[here](https://en.wikipedia.org/wiki/Bias–variance_tradeoff#Derivation).
+
+Also can find helpful info in week 3 of “Machine Learning: Regression”.
+
+Overfitting and Underfitting
+----------------------------
+
+How to treat overfitting or underfitting?
+
+-   Ridge, L2 regularization
+-   Lasso, L1 regularization
+
+### Ridge
+
+Clarifying how to implement not regularizing intercept.
+
+### Lasso
+
+What is Coordinate Descent?
+
+What is normalizing features?
+
+How to derive the coordinate descent update?
+
+**Question**: why is *ρ*<sub>*i*</sub> a correlation?
+
+**Coordinate descent** converges for lasso objective.
+
+### Ridge Regression
+
+Compute the gradient of the ridge cost function.
+
+### KNN
+
+### Kernel Regression
+
+What is **local linear regression**?
+
+Trees based methods
+===================
+
+Classification Trees
+--------------------
+
+What is pruning?
+
+What is Gini index?
+
+Random Forests
+--------------
+
+### What is “OOB Error”?
+
+OOB stands for Out-of-Bag.
+
+### Clarify the usage of weighted random forest when facing imbalanced data.
+
+### Clarify **Partial Dependence Plot**
+
+Helpful
+[link](https://christophm.github.io/interpretable-ml-book/pdp.html)
+
+Modeling Techniques
+===================
+
+How to deal with missing values
+-------------------------------
+
+There are several ways:
+
+1.  Remove the rows entirely.
+2.  Treat missing values as NA.
+3.  Spot the pattern if any.
+
+R
+=
+
+What is a connection in R?
+--------------------------
+
+[Answer](https://stackoverflow.com/questions/30445875/what-exactly-is-a-connection-in-r).
+**\[pending\]** still not sure.
+
+How hackerrank uses it.
+[Link](https://www.hackerrank.com/environment/sample-problem).
