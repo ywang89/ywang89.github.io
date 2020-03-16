@@ -186,6 +186,11 @@ $$
 [Reference
 link](https://medium.com/@sundarstyles89/weight-of-evidence-and-information-value-using-python-6f05072e83eb)
 
+### How to interpret significance of categorical variable?
+
+A helpful
+[thread](https://stats.stackexchange.com/questions/60817/significance-of-categorical-predictor-in-logistic-regression)
+
 ### Gini Coefficient & ROC
 
 ROC and Gini coefficient(*G*<sub>1</sub>) have a relationship that:
