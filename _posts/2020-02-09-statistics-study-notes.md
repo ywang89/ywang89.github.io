@@ -1,6 +1,16 @@
 This is a document where I try to gather and structure my knowledge in
 statistics. This is being continuously updated.
 
+Linear Algebra
+==============
+
+**Rank**. A helpful [Khan Academy
+video](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/null-column-space/v/dimension-of-the-column-space-or-rank)
+on this topic. Basically rank(A) is the number of vectors in the basis
+of column space of A.
+
+**Reduced row echelon form**. A related concepts to rank.
+
 Basic Statistics
 ================
 
@@ -168,6 +178,14 @@ explanation](https://www.youtube.com/watch?v=ScKL40dp8M4)
 [The F statistic - an
 introduction](https://www.youtube.com/watch?v=ie-MYQp1Nic)
 
+### Ordinary Least Squares Estimators
+
+To derive the matrix form solution, below are some helpful resources:
+
+[Matrix calculus summary for DL](https://explained.ai/matrix-calculus/)
+[Khan academy on determing invertible
+matrix](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices/x9e81a4f98389efdf:intro-to-matrix-inverses/v/singular-matrices)
+
 Logistic Regression
 -------------------
 
@@ -281,6 +299,11 @@ OOB stands for Out-of-Bag.
 
 Helpful
 [link](https://christophm.github.io/interpretable-ml-book/pdp.html)
+
+Generative models
+=================
+
+TODO: explain what is generative models
 
 Modeling Techniques
 ===================
