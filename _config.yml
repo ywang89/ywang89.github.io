@@ -14,6 +14,3 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-theme: jekyll-theme-dinky
-title: YW Blog
-description: This is a blog on topics such as statistics, data science, etc. Mostly study notes. :) 
