@@ -1,6 +1,8 @@
 This is a document where I try to gather and structure my knowledge in
 statistics. This is being continuously updated.
 
+Last updated: 2021-01
+
 Linear Algebra
 ==============
 
@@ -300,6 +302,23 @@ Classification Trees
 What is pruning?
 
 What is Gini index?
+
+**What is Entrophy and Information Gain?**
+
+Entrophy is used to assess uncertainty in data (think of entrophy of the
+universe). Good split should decrease entrophy of data. Because of that,
+entrophy is used to pick a good split.
+
+Now, a relevant concept is introduced, which is Information Gain. In a
+nutshell, information gain measures the decrease of entrophy.
+
+For a good blog article on this topic, refer to [this one](https://towardsdatascience.com/enchanted-random-forest-b08d418cb411).
+
+For an example on how a best split is chosen using entrophy and information
+gain, refer to [this example](https://en.wikipedia.org/wiki/Information_gain_in_decision_trees#Example) 
+on Wikipedia.
+
+
 
 Random Forests
 --------------
